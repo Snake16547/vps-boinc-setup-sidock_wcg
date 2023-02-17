@@ -13,9 +13,12 @@ clear
 echo -e "${GREEN}Updating package list...${NC}"
 sudo apt update > /dev/null 2>&1
 
-# Upgrade the installed packages and redirect output to null
+# Upgrade the installed packages with detailed and animated output
 echo -e "${GREEN}Upgrading installed packages...${NC}"
-sudo apt upgrade -y > /dev/null 2>&1
+echo -e "${BLUE}[${NC}                    ${BLUE}]${NC} 0% completed"
+sudo apt upgrade -y 2>&1 | while read -r line; do
+    echo -e "${BLUE}[${NC}${line:0:20}${BLUE}]${NC} ${line:20}"
+done | whiptail --title "Updating Packages" --gauge "Please wait..." 8 50 0
 
 # Remove unnecessary packages and clean up and redirect output to null
 echo -e "${GREEN}Removing unnecessary packages and cleaning up...${NC}"
