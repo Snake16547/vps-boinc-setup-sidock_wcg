@@ -23,8 +23,8 @@ sudo apt autoremove -y > /dev/null 2>&1
 sudo apt autoclean > /dev/null 2>&1
 
 # Install boinc unattended-upgrade and fail2ban and redirect output to null
-echo -e "${GREEN}Install boinc-client, unattended-upgrade and fail2ban...${NC}"
-sudo apt-get install boinc-client unattended-upgrades fail2ban -y > /dev/null 2>&1
+echo -e "${GREEN}Install boinc-client, unattended-upgrade, htop and fail2ban...${NC}"
+sudo apt-get install boinc-client unattended-upgrades fail2ban htop -y > /dev/null 2>&1
 
 # Start BOINC and redirect output to null
 echo -e "${GREEN}Starting BOINC...${NC}"
