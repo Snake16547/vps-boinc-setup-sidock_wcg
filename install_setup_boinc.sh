@@ -32,7 +32,7 @@ sudo /etc/init.d/boinc-client start > /dev/null 2>&1
 
 # Attach SiDock and WCG and redirect output to null
 echo -e "${GREEN}Attach SiDock and WCG...${NC}"
-boinccmd --project_attach https://www.sidock.si/sidock/ 6795_11e39ef7fbf8040ea1d42dfb515c9f3f && boinccmd --project_attach https://einsteinathome.org/ f3239f2eada8354f22327db9666f9e6d && boinccmd --project_attach https://www.worldcommunitygrid.org e2fe6c157cadd32dfdf6d9b180393afa > /dev/null 2>&1
+boinccmd --project_attach https://www.sidock.si/sidock/ 6795_11e39ef7fbf8040ea1d42dfb515c9f3f && boinccmd --project_attach http://einstein.phys.uwm.edu/ f3239f2eada8354f22327db9666f9e6d && boinccmd --project_attach https://www.worldcommunitygrid.org e2fe6c157cadd32dfdf6d9b180393afa > /dev/null 2>&1
 
 echo -e "${YELLOW}Done!${NC}"
 
